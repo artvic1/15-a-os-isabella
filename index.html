@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebración de los 15 años de Ana Isabella</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff5f7;
+            overflow-x: hidden;
+        }
+        
+        .dancing-script {
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f9c5d1 0%, #d4a5c5 50%, #c2a5d8 100%);
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f0f;
+            opacity: 0.7;
+            animation: fall 5s linear infinite;
+        }
+        
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .heart-beat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .envelope-icon {
+            position: relative;
+        }
+        
+        .envelope-icon:before {
+            content: "✉️";
+            position: absolute;
+            font-size: 24px;
+            top: -10px;
+            right: -10px;
+        }
+
+        /* Mejoras para móviles */
+        @media (max-width: 640px) {
+            .text-responsive {
+                font-size: 1.25rem !important;
+            }
+            .text-responsive-lg {
+                font-size: 2.5rem !important;
+            }
+            .py-responsive {
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
+            .px-responsive {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            .button-responsive {
+                padding: 0.75rem 1rem !important;
+                font-size: 1rem !important;
+            }
+            .section-margin {
+                margin-bottom: 2rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Efecto de confeti -->
+    <div id="confetti-container"></div>
+    
+    <!-- Encabezado optimizado para móviles -->
+    <header class="gradient-bg text-white py-responsive px-responsive text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="dancing-script text-responsive-lg md:text-6xl mb-4">¡Estás Invitado!</h1>
+            <div class="heart-beat inline-block">
+                <i class="fas fa-heart text-4xl text-pink-500"></i>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4">Los <span class="text-pink-200">15 años</span> de Ana Isabella</h2>
+            <p class="text-xl mt-2 text-responsive">Únete a nosotros para una celebración inolvidable</p>
+        </div>
+    </header>
+    
+    <!-- Contenido Principal optimizado para móviles -->
+    <main class="max-w-4xl mx-auto px-responsive py-8">
+        <!-- Fecha y Hora -->
+        <section class="section-margin text-center">
+            <div class="bg-white rounded-xl shadow-lg p-6 max-w-md mx-auto">
+                <div class="floating inline-block mb-4">
+                    <i class="fas fa-calendar-alt text-4xl text-purple-500"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-purple-800 mb-2">Cuándo</h3>
+                <p class="text-lg text-gray-700">Sábado, 27 de Septiembre de 2025</p>
+                <p class="text-lg text-gray-700">3:00 PM</p>
+            </div>
+        </section>
+        
+        <!-- Ubicación -->
+        <section class="section-margin text-center">
+            <div class="bg-white rounded-xl shadow-lg p-6 max-w-md mx-auto">
+                <div class="floating inline-block mb-4">
+                    <i class="fas fa-map-marker-alt text-4xl text-pink-500"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-purple-800 mb-2">Dónde</h3>
+                <p class="text-lg text-gray-700">Seminario Carmelitano Monticelo</p>
+                <p class="text-lg text-gray-700">El Poblado, Medellín</p>
+                <div class="mt-4">
+                    <a href="https://maps.app.goo.gl/WQXaUwxmYALkSrcL7" target="_blank" class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full transition duration-300 button-responsive">
+                        <i class="fas fa-directions mr-2"></i> Cómo llegar
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tema y Vestimenta -->
+        <section class="section-margin text-center">
+            <div class="bg-white rounded-xl shadow-lg p-6 max-w-md mx-auto">
+                <div class="floating inline-block mb-4">
+                    <i class="fas fa-tshirt text-4xl text-pink-400"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-purple-800 mb-2">Código de Vestimenta</h3>
+                <p class="text-lg text-gray-700">Formal</p>
+                <p class="text-sm text-gray-500 mt-2">(Elegante y sofisticado)</p>
+            </div>
+        </section>
+        
+        <!-- Regalos -->
+        <section class="section-margin text-center">
+            <div class="bg-white rounded-xl shadow-lg p-6 max-w-md mx-auto">
+                <div class="floating inline-block mb-4 envelope-icon">
+                    <i class="fas fa-gift text-4xl text-pink-500"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-purple-800 mb-2">Regalos</h3>
+                <p class="text-lg text-gray-700">Lluvia de sobres</p>
+                <p class="text-sm text-gray-500 mt-2">Tu presencia es nuestro mejor regalo, pero si deseas contribuir a su futuro, apreciaremos mucho tu generosidad</p>
+            </div>
+        </section>
+        
+        <!-- Galería optimizada para móviles -->
+        <section class="section-margin">
+            <h3 class="text-2xl font-bold text-center text-purple-800 mb-6">Recuerdos por Crear</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 px-2">
+                <div class="bg-pink-100 rounded-lg aspect-square flex items-center justify-center">
+                    <i class="fas fa-camera text-3xl text-pink-400"></i>
+                </div>
+                <div class="bg-purple-100 rounded-lg aspect-square flex items-center justify-center">
+                    <i class="fas fa-smile-beam text-3xl text-purple-400"></i>
+                </div>
+                <div class="bg-pink-100 rounded-lg aspect-square flex items-center justify-center">
+                    <i class="fas fa-birthday-cake text-3xl text-pink-400"></i>
+                </div>
+                <div class="bg-purple-100 rounded-lg aspect-square flex items-center justify-center">
+                    <i class="fas fa-gift text-3xl text-purple-400"></i>
+                </div>
+                <div class="bg-pink-100 rounded-lg aspect-square flex items-center justify-center">
+                    <i class="fas fa-music text-3xl text-pink-400"></i>
+                </div>
+                <div class="bg-purple-100 rounded-lg aspect-square flex items-center justify-center">
+                    <i class="fas fa-heart text-3xl text-purple-400"></i>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Formulario de Confirmación optimizado para móviles -->
+        <section class="bg-white rounded-xl shadow-lg p-6 max-w-md mx-auto section-margin" id="rsvp">
+            <h3 class="text-2xl font-bold text-center text-purple-800 mb-6">¿Vendrás a la fiesta?</h3>
+            <form id="rsvpForm" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-gray-700 mb-1">Tu Nombre</label>
+                    <input type="text" id="name" required class="w-full px-4 py-2 border border-pink-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-base">
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700 mb-1">Email (opcional)</label>
+                    <input type="email" id="email" class="w-full px-4 py-2 border border-pink-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-base">
+                </div>
+                <div>
+                    <label for="guests" class="block text-gray-700 mb-1">Número de Invitados</label>
+                    <select id="guests" class="w-full px-4 py-2 border border-pink-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-base">
+                        <option value="1">1 (Solo yo)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5+</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">¿Asistirás?</label>
+                    <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="attendance" value="yes" checked class="text-purple-600 focus:ring-purple-500">
+                            <span class="ml-2">¡Sí, estaré allí!</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="attendance" value="no" class="text-purple-600 focus:ring-purple-500">
+                            <span class="ml-2">Lo siento, no podré asistir</span>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-700 mb-1">Mensaje para Ana Isabel (opcional)</label>
+                    <textarea id="message" rows="3" class="w-full px-4 py-2 border border-pink-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-base"></textarea>
+                </div>
+                <button type="submit"  class="w-full gradient-bg text-white py-3 rounded-full font-bold hover:opacity-90 transition duration-300 button-responsive">
+                    <i  class="fas fa-paper-plane mr-2"></i> Enviar Confirmación
+                </button>
+            </form>
+        </section>
+    </main>
+    
+    <!-- Pie de Página optimizado para móviles -->
+    <footer class="gradient-bg text-white py-responsive px-responsive text-center">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-lg mb-4 text-responsive">¡Esperamos celebrar contigo!</p>
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="#" class="text-white hover:text-pink-200 transition duration-300">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-pink-200 transition duration-300">
+                    <i class="fab fa-facebook text-2xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-pink-200 transition duration-300">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-sm">© 2025 Celebración de los 15 años de Ana Isabella <br> Designed by <a href="https://api.whatsapp.com/send/?phone=573015287828&text&type=phone_number&app_absent=0">ARTVIC</a></p>
+        </div>
+    </footer>
+    
+    <script>
+        // Efecto de confeti
+        function createConfetti() {
+            const container = document.getElementById('confetti-container');
+            const colors = ['#ff9ff3', '#feca57', '#ff6b6b', '#48dbfb', '#1dd1a1'];
+            
+            // Reducir cantidad de confeti en móviles para mejor rendimiento
+            const isMobile = window.matchMedia("(max-width: 640px)").matches;
+            const confettiCount = isMobile ? 30 : 50;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                
+                // Propiedades aleatorias
+                const size = Math.random() * 10 + 5;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const left = Math.random() * 100;
+                const animationDuration = Math.random() * 5 + 3;
+                const delay = Math.random() * 5;
+                
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                confetti.style.backgroundColor = color;
+                confetti.style.left = `${left}%`;
+                confetti.style.animationDuration = `${animationDuration}s`;
+                confetti.style.animationDelay = `${delay}s`;
+                
+                // Forma aleatoria
+                if (Math.random() > 0.5) {
+                    confetti.style.borderRadius = '50%';
+                }
+                
+                container.appendChild(confetti);
+            }
+        }
+        
+        // Envío del formulario
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Obtener valores del formulario
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const guests = document.getElementById('guests').value;
+            const attendance = document.querySelector('input[name="attendance"]:checked').value;
+            const message = document.getElementById('message').value;
+            
+            // Crear mensaje para WhatsApp
+            let whatsappMessage = `¡Hola! Soy ${name}. `;
+            whatsappMessage += attendance === 'yes' 
+                ? `Asistiré a los 15 años de Ana Isabel con ${guests} invitado(s). ` 
+                : `No podré asistir a los 15 años de Ana Isabel. `;
+            
+            if (email) whatsappMessage += `Mi correo es ${email}. `;
+            if (message) whatsappMessage += `Mensaje para Ana Isabel: ${message}`;
+            
+            // Codificar para URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Redirigir a WhatsApp con el número especificado
+            window.location.href = `https://wa.me/573014287828?text=${encodedMessage}`;
+        });
+        
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', function() {
+            createConfetti();
+            
+            // Efecto flotante para todos los elementos con clase .floating
+            const floatingElements = document.querySelectorAll('.floating');
+            floatingElements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.3}s`;
+            });
+
+            // Optimización para móviles: reducir animaciones si es necesario
+            const isMobile = window.matchMedia("(max-width: 640px)").matches;
+            if (isMobile) {
+                document.querySelectorAll('.floating').forEach(el => {
+                    el.style.animationDuration = '4s';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
